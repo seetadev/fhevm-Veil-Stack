@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/helper/contract";
 const deployedContracts = {
   31337: {
     Canteen: {
-      address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      address: "0xE0999A91834cbF74d8ad8ededa368E397081e0aa",
       abi: [
         {
           inputs: [],
