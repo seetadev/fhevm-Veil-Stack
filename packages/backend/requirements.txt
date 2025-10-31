@@ -1,0 +1,22 @@
+# Python dependencies for Canteen Orchestrator Backend
+
+# Web3 and blockchain
+web3==6.11.3
+python-dotenv==1.0.0
+
+# Async networking
+trio==0.23.1
+libp2p==0.1.5
+
+# Docker
+docker==6.1.3
+
+# Web server
+aiohttp==3.9.1
+aiohttp-cors==0.7.0
+
+# Cryptography (for FHE simulation)
+pycryptodome==3.19.0
+
+# Utilities
+pymdnssd==0.4.0  # For mDNS discovery

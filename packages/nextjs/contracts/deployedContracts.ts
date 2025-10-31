@@ -6,8 +6,1073 @@ import { GenericContractsDeclaration } from "~~/utils/helper/contract";
 
 const deployedContracts = {
   31337: {
+    Canteen: {
+      address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      abi: [
+        {
+          inputs: [],
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "containerId",
+              type: "uint256",
+            },
+          ],
+          name: "ContainerAssigned",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "containerId",
+              type: "uint256",
+            },
+          ],
+          name: "ContainerRemoved",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+          ],
+          name: "DeploymentCompleted",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "remaining",
+              type: "uint256",
+            },
+          ],
+          name: "DeploymentQueued",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+          ],
+          name: "MemberImageUpdate",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "bytes",
+              name: "encryptedMemory",
+              type: "bytes",
+            },
+          ],
+          name: "MemberJoin",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "MemberLeave",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "bytes",
+              name: "newEncryptedMemory",
+              type: "bytes",
+            },
+          ],
+          name: "MemberMemoryUpdate",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "replicas",
+              type: "uint256",
+            },
+          ],
+          name: "addImage",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              internalType: "bytes",
+              name: "encryptedMemory",
+              type: "bytes",
+            },
+          ],
+          name: "addMember",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "addMember",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "from",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "to",
+              type: "uint256",
+            },
+          ],
+          name: "addPortForImage",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+          ],
+          name: "getImageDetails",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "imageName",
+              type: "string",
+            },
+          ],
+          name: "getImageHosts",
+          outputs: [
+            {
+              internalType: "string[]",
+              name: "",
+              type: "string[]",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "getImagesCount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "getMemberDetails",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+            {
+              internalType: "bytes",
+              name: "",
+              type: "bytes",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "getMemberEncryptedMemory",
+          outputs: [
+            {
+              internalType: "bytes",
+              name: "",
+              type: "bytes",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "getMemberImages",
+          outputs: [
+            {
+              internalType: "string[]",
+              name: "",
+              type: "string[]",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "getMembersCount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+          ],
+          name: "getPortsForImage",
+          outputs: [
+            {
+              internalType: "uint256[2][]",
+              name: "",
+              type: "uint256[2][]",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "images",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          name: "memberContainerCount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "memberContainers",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "members",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "owner",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          name: "pendingDeployments",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+          ],
+          name: "removeImage",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "removeMember",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              internalType: "bytes",
+              name: "newEncryptedMemory",
+              type: "bytes",
+            },
+          ],
+          name: "updateMemberMemory",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+      deployedOnBlock: 5,
+    },
+    CanteenFHEVM: {
+      address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      abi: [
+        {
+          inputs: [],
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "containerId",
+              type: "uint256",
+            },
+          ],
+          name: "ContainerAssigned",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "containerId",
+              type: "uint256",
+            },
+          ],
+          name: "ContainerRemoved",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+          ],
+          name: "DeploymentCompleted",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "remaining",
+              type: "uint256",
+            },
+          ],
+          name: "DeploymentQueued",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+          ],
+          name: "MemberImageUpdate",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "MemberJoin",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "MemberLeave",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "MemberMemoryUpdate",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "replicas",
+              type: "uint256",
+            },
+          ],
+          name: "addImage",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "encryptedMemory",
+              type: "uint256",
+            },
+          ],
+          name: "addMember",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "addMember",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "from",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "to",
+              type: "uint256",
+            },
+          ],
+          name: "addPortForImage",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+          ],
+          name: "getImageDetails",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "getImagesCount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "getMemberImages",
+          outputs: [
+            {
+              internalType: "string[]",
+              name: "",
+              type: "string[]",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "getMembersCount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "imageName",
+              type: "string",
+            },
+          ],
+          name: "getPendingDeployments",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+          ],
+          name: "getPortsForImage",
+          outputs: [
+            {
+              internalType: "uint256[2][]",
+              name: "",
+              type: "uint256[2][]",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "images",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "isMemberActive",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          name: "memberContainerCount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "memberContainers",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "members",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "owner",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          name: "pendingDeployments",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+          ],
+          name: "removeImage",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "removeMember",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "newEncryptedMemory",
+              type: "uint256",
+            },
+          ],
+          name: "updateMemberMemory",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+      deployedOnBlock: 4,
+    },
     FHECounter: {
-      address: "0x40e8Aa088739445BC3a3727A724F56508899f65B",
+      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
       abi: [
         {
           inputs: [
@@ -77,8 +1142,1073 @@ const deployedContracts = {
     },
   },
   11155111: {
+    Canteen: {
+      address: "0xE0999A91834cbF74d8ad8ededa368E397081e0aa",
+      abi: [
+        {
+          inputs: [],
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "containerId",
+              type: "uint256",
+            },
+          ],
+          name: "ContainerAssigned",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "containerId",
+              type: "uint256",
+            },
+          ],
+          name: "ContainerRemoved",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+          ],
+          name: "DeploymentCompleted",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "remaining",
+              type: "uint256",
+            },
+          ],
+          name: "DeploymentQueued",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+          ],
+          name: "MemberImageUpdate",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "bytes",
+              name: "encryptedMemory",
+              type: "bytes",
+            },
+          ],
+          name: "MemberJoin",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "MemberLeave",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "bytes",
+              name: "newEncryptedMemory",
+              type: "bytes",
+            },
+          ],
+          name: "MemberMemoryUpdate",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "replicas",
+              type: "uint256",
+            },
+          ],
+          name: "addImage",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              internalType: "bytes",
+              name: "encryptedMemory",
+              type: "bytes",
+            },
+          ],
+          name: "addMember",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "addMember",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "from",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "to",
+              type: "uint256",
+            },
+          ],
+          name: "addPortForImage",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+          ],
+          name: "getImageDetails",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "imageName",
+              type: "string",
+            },
+          ],
+          name: "getImageHosts",
+          outputs: [
+            {
+              internalType: "string[]",
+              name: "",
+              type: "string[]",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "getImagesCount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "getMemberDetails",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+            {
+              internalType: "bytes",
+              name: "",
+              type: "bytes",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "getMemberEncryptedMemory",
+          outputs: [
+            {
+              internalType: "bytes",
+              name: "",
+              type: "bytes",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "getMemberImages",
+          outputs: [
+            {
+              internalType: "string[]",
+              name: "",
+              type: "string[]",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "getMembersCount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+          ],
+          name: "getPortsForImage",
+          outputs: [
+            {
+              internalType: "uint256[2][]",
+              name: "",
+              type: "uint256[2][]",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "images",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          name: "memberContainerCount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "memberContainers",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "members",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "owner",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          name: "pendingDeployments",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+          ],
+          name: "removeImage",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "removeMember",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              internalType: "bytes",
+              name: "newEncryptedMemory",
+              type: "bytes",
+            },
+          ],
+          name: "updateMemberMemory",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+      deployedOnBlock: 9530436,
+    },
+    CanteenFHEVM: {
+      address: "0xad42fdE4D1886169370C89ebe74791Df7Ee326F9",
+      abi: [
+        {
+          inputs: [],
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "containerId",
+              type: "uint256",
+            },
+          ],
+          name: "ContainerAssigned",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "containerId",
+              type: "uint256",
+            },
+          ],
+          name: "ContainerRemoved",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+          ],
+          name: "DeploymentCompleted",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "remaining",
+              type: "uint256",
+            },
+          ],
+          name: "DeploymentQueued",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "image",
+              type: "string",
+            },
+          ],
+          name: "MemberImageUpdate",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "MemberJoin",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "MemberLeave",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "MemberMemoryUpdate",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "replicas",
+              type: "uint256",
+            },
+          ],
+          name: "addImage",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "encryptedMemory",
+              type: "uint256",
+            },
+          ],
+          name: "addMember",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "addMember",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "from",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "to",
+              type: "uint256",
+            },
+          ],
+          name: "addPortForImage",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+          ],
+          name: "getImageDetails",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "getImagesCount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "getMemberImages",
+          outputs: [
+            {
+              internalType: "string[]",
+              name: "",
+              type: "string[]",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "getMembersCount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "imageName",
+              type: "string",
+            },
+          ],
+          name: "getPendingDeployments",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+          ],
+          name: "getPortsForImage",
+          outputs: [
+            {
+              internalType: "uint256[2][]",
+              name: "",
+              type: "uint256[2][]",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "images",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "isMemberActive",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          name: "memberContainerCount",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "memberContainers",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "members",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "owner",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "",
+              type: "bytes32",
+            },
+          ],
+          name: "pendingDeployments",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "name",
+              type: "string",
+            },
+          ],
+          name: "removeImage",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+          ],
+          name: "removeMember",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "host",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "newEncryptedMemory",
+              type: "uint256",
+            },
+          ],
+          name: "updateMemberMemory",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+      deployedOnBlock: 9530435,
+    },
     FHECounter: {
-      address: "0xead137D42d2E6A6a30166EaEf97deBA1C3D1954e",
+      address: "0xB82134203Cc54BC47316EECb4C0C1E0Fa43329bA",
       abi: [
         {
           inputs: [
@@ -144,7 +2274,7 @@ const deployedContracts = {
         },
       ],
       inheritedFunctions: {},
-      deployedOnBlock: 9368216,
+      deployedOnBlock: 9530434,
     },
   },
 } as const;

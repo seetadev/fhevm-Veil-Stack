@@ -1,0 +1,13 @@
+{
+  "name": "canteen-orchestrator",
+  "version": 2,
+  "framework": "nextjs",
+  "buildCommand": "cd packages/nextjs && pnpm build",
+  "devCommand": "cd packages/nextjs && pnpm dev",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "outputDirectory": "packages/nextjs/.next",
+  "regions": ["iad1"],
+  "github": {
+    "silent": true
+  }
+}

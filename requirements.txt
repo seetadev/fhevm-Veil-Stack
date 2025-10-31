@@ -1,0 +1,3 @@
+# Requirements for utility scripts (check_members.py, etc.)
+web3==6.11.3
+python-dotenv==1.0.0
