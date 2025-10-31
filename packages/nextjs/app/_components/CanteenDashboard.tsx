@@ -101,16 +101,204 @@ export const CanteenDashboard = () => {
 
   if (!isConnected) {
     return (
-      <div className="max-w-6xl mx-auto p-6 text-gray-900">
-        <div className="flex items-center justify-center">
-          <div className="bg-white shadow-xl p-8 text-center border-2 border-gray-200">
-            <div className="mb-4">
-              <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-900/30 text-amber-400 text-3xl">
-                ⚠️
-              </span>
+      <div className="max-w-7xl mx-auto p-6 text-gray-900">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white shadow-2xl p-12 mb-8 border-2 border-gray-700 rounded-lg">
+          <div className="text-center mb-8">
+            <h1 className="text-5xl font-bold mb-4">
+              <span className="text-[#FFD208]">Veil Stack</span>
+            </h1>
+            <p className="text-2xl text-gray-300 mb-6">Confidential Decentralized Container Orchestration</p>
+            <div className="flex justify-center">
+              <RainbowKitCustomConnectButton />
             </div>
-            <h2 className="text-2xl font-bold mb-4 text-gray-900">Wallet Not Connected</h2>
-            <p className="text-gray-600 mb-6">Please connect your wallet to interact with the Canteen orchestrator.</p>
+          </div>
+        </div>
+
+        {/* Project Overview */}
+        <div className="bg-white shadow-xl p-8 mb-8 border-2 border-gray-200 rounded-lg">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900 border-b-4 border-[#FFD208] pb-3">
+            What is Veil Stack?
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            Veil Stack is a <strong>confidential, decentralized container orchestration platform</strong> designed to
+            enable distributed compute environments to schedule and manage workloads without exposing infrastructure
+            telemetry or operational metadata.
+          </p>
+        </div>
+
+        {/* Key Technology */}
+        <div className="bg-white shadow-xl p-8 mb-8 border-2 border-gray-200 rounded-lg">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900 border-b-4 border-[#FFD208] pb-3">
+            Built on Zama FHE Technology
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            Built on <strong>Zama's Universal Fully Homomorphic Encryption (FHE) SDK</strong>, Veil Stack performs
+            scheduling and policy logic directly over encrypted node metrics, ensuring complete confidentiality even in
+            untrusted or multi-organization clusters.
+          </p>
+          <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mt-6">
+            <p className="text-gray-800 leading-relaxed">
+              <strong>Unlike traditional orchestrators</strong> such as Kubernetes or Nomad, which require full
+              visibility into every node's CPU, memory, and workload profiles, <strong>Veil Stack removes that
+              requirement entirely</strong>. Each node encrypts its telemetry using Zama FHE, allowing scheduling
+              decisions and policy enforcement to occur without ever decrypting the data.
+            </p>
+          </div>
+        </div>
+
+        {/* How It Works */}
+        <div className="bg-white shadow-xl p-8 mb-8 border-2 border-gray-200 rounded-lg">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900 border-b-4 border-[#FFD208] pb-3">
+            How It Works
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <span className="text-3xl mr-3">🔐</span>
+                Encrypted Resource Metrics
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                CPU, memory, and system load are securely shared across the cluster while maintaining privacy through
+                homomorphic encryption.
+              </p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <span className="text-3xl mr-3">🧮</span>
+                Computation Over Ciphertext
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Scheduling algorithms, including cost functions, replica placement, and priority rules, run entirely
+                over ciphertext without decryption.
+              </p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <span className="text-3xl mr-3">📋</span>
+                Private Policy Evaluation
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Policies like quotas and placement constraints are evaluated privately to preserve operational secrecy
+                across organizations.
+              </p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <span className="text-3xl mr-3">🤝</span>
+                Trustless Coordination
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Enables coordination across institutions without the need for trust agreements, NDAs, or data exposure.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Use Cases */}
+        <div className="bg-white shadow-xl p-8 mb-8 border-2 border-gray-200 rounded-lg">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900 border-b-4 border-[#FFD208] pb-3">
+            Real-World Use Cases
+          </h2>
+          <div className="space-y-4">
+            <div className="flex items-start">
+              <span className="text-2xl mr-4">🏥</span>
+              <div>
+                <h4 className="font-bold text-lg text-gray-900">Multi-Hospital ML Networks</h4>
+                <p className="text-gray-700">
+                  Deploy orchestration in sensitive healthcare environments without exposing patient data or
+                  infrastructure details.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <span className="text-2xl mr-4">☁️</span>
+              <div>
+                <h4 className="font-bold text-lg text-gray-900">Cross-Cloud Scientific Compute Alliances</h4>
+                <p className="text-gray-700">
+                  Enable collaborative research computing across different cloud providers while maintaining data
+                  privacy.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <span className="text-2xl mr-4">🎮</span>
+              <div>
+                <h4 className="font-bold text-lg text-gray-900">Decentralized GPU Networks</h4>
+                <p className="text-gray-700">
+                  Coordinate GPU resources across distributed networks without revealing computational workload details.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <span className="text-2xl mr-4">🛡️</span>
+              <div>
+                <h4 className="font-bold text-lg text-gray-900">Government & Defense Infrastructure</h4>
+                <p className="text-gray-700">
+                  Deploy secure orchestration in high-security environments with complete operational confidentiality.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Screenshots */}
+        <div className="bg-white shadow-xl p-8 mb-8 border-2 border-gray-200 rounded-lg">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900 border-b-4 border-[#FFD208] pb-3">
+            Platform Screenshots
+          </h2>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Cluster Visualization Dashboard</h3>
+              <img
+                src="/screenshot-dashboard.png"
+                alt="Veil Stack Cluster Dashboard"
+                className="w-full rounded-lg border-2 border-gray-300 shadow-md"
+              />
+              <p className="text-gray-600 mt-2 text-sm italic">
+                Visual representation of the decentralized container orchestrator showing deployed nodes and their
+                connections.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Node Registration & Event Logs</h3>
+              <img
+                src="/screenshot-events.png"
+                alt="Node Registration Events"
+                className="w-full rounded-lg border-2 border-gray-300 shadow-md"
+              />
+              <p className="text-gray-600 mt-2 text-sm italic">
+                Blockchain event logs showing node registrations and image updates, demonstrating transparent operations
+                while maintaining data privacy.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">P2P Node Startup & Configuration</h3>
+              <img
+                src="/screenshot-node.png"
+                alt="Node Startup Configuration"
+                className="w-full rounded-lg border-2 border-gray-300 shadow-md"
+              />
+              <p className="text-gray-600 mt-2 text-sm italic">
+                Node initialization showing Hyperswarm P2P networking, cluster health monitoring, and container
+                deployment status.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Conclusion */}
+        <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white shadow-xl p-8 mb-8 border-2 border-gray-700 rounded-lg">
+          <h2 className="text-3xl font-bold mb-6 text-white border-b-4 border-[#FFD208] pb-3">
+            The Future of Orchestration
+          </h2>
+          <p className="text-lg text-gray-200 leading-relaxed mb-6">
+            In essence, <strong className="text-[#FFD208]">Veil Stack redefines container orchestration through
+            cryptographic privacy</strong>, bringing a new era of confidential orchestration where intelligent
+            scheduling decisions can be made securely and transparently—without revealing any underlying operational
+            data.
+          </p>
+          <div className="flex justify-center">
             <RainbowKitCustomConnectButton />
           </div>
         </div>
