@@ -1,13 +1,5 @@
 {
-  "name": "canteen-orchestrator",
-  "version": 2,
-  "framework": "nextjs",
-  "buildCommand": "pnpm install && cd packages/nextjs && pnpm build",
-  "devCommand": "cd packages/nextjs && pnpm dev",
+  "buildCommand": "cd packages/nextjs && pnpm build",
   "installCommand": "pnpm install",
-  "outputDirectory": "packages/nextjs/.next",
-  "regions": ["iad1"],
-  "github": {
-    "silent": true
-  }
+  "framework": "nextjs"
 }
