@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import { useFhevm } from "@fhevm-sdk";
 import { useAccount } from "wagmi";
 import { RainbowKitCustomConnectButton } from "~~/components/helper/RainbowKitCustomConnectButton";
@@ -133,25 +134,23 @@ export const CanteenDashboard = () => {
             Built on Zama FHE Technology
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            Built on <strong>Zama's Universal Fully Homomorphic Encryption (FHE) SDK</strong>, Veil Stack performs
+            Built on <strong>Zama&apos;s Universal Fully Homomorphic Encryption (FHE) SDK</strong>, Veil Stack performs
             scheduling and policy logic directly over encrypted node metrics, ensuring complete confidentiality even in
             untrusted or multi-organization clusters.
           </p>
           <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mt-6">
             <p className="text-gray-800 leading-relaxed">
               <strong>Unlike traditional orchestrators</strong> such as Kubernetes or Nomad, which require full
-              visibility into every node's CPU, memory, and workload profiles, <strong>Veil Stack removes that
-              requirement entirely</strong>. Each node encrypts its telemetry using Zama FHE, allowing scheduling
-              decisions and policy enforcement to occur without ever decrypting the data.
+              visibility into every node&apos;s CPU, memory, and workload profiles,{" "}
+              <strong>Veil Stack removes that requirement entirely</strong>. Each node encrypts its telemetry using
+              Zama FHE, allowing scheduling decisions and policy enforcement to occur without ever decrypting the data.
             </p>
           </div>
         </div>
 
         {/* How It Works */}
         <div className="bg-white shadow-xl p-8 mb-8 border-2 border-gray-200 rounded-lg">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900 border-b-4 border-[#FFD208] pb-3">
-            How It Works
-          </h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900 border-b-4 border-[#FFD208] pb-3">How It Works</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
               <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
@@ -250,9 +249,11 @@ export const CanteenDashboard = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Cluster Visualization Dashboard</h3>
-              <img
+              <Image
                 src="/screenshot-dashboard.png"
                 alt="Veil Stack Cluster Dashboard"
+                width={1200}
+                height={800}
                 className="w-full rounded-lg border-2 border-gray-300 shadow-md"
               />
               <p className="text-gray-600 mt-2 text-sm italic">
@@ -262,9 +263,11 @@ export const CanteenDashboard = () => {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Node Registration & Event Logs</h3>
-              <img
+              <Image
                 src="/screenshot-events.png"
                 alt="Node Registration Events"
+                width={1200}
+                height={800}
                 className="w-full rounded-lg border-2 border-gray-300 shadow-md"
               />
               <p className="text-gray-600 mt-2 text-sm italic">
@@ -274,9 +277,11 @@ export const CanteenDashboard = () => {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">P2P Node Startup & Configuration</h3>
-              <img
+              <Image
                 src="/screenshot-node.png"
                 alt="Node Startup Configuration"
+                width={1200}
+                height={800}
                 className="w-full rounded-lg border-2 border-gray-300 shadow-md"
               />
               <p className="text-gray-600 mt-2 text-sm italic">
@@ -293,10 +298,12 @@ export const CanteenDashboard = () => {
             The Future of Orchestration
           </h2>
           <p className="text-lg text-gray-200 leading-relaxed mb-6">
-            In essence, <strong className="text-[#FFD208]">Veil Stack redefines container orchestration through
-            cryptographic privacy</strong>, bringing a new era of confidential orchestration where intelligent
-            scheduling decisions can be made securely and transparently—without revealing any underlying operational
-            data.
+            In essence,{" "}
+            <strong className="text-[#FFD208]">
+              Veil Stack redefines container orchestration through cryptographic privacy
+            </strong>
+            , bringing a new era of confidential orchestration where intelligent scheduling decisions can be made
+            securely and transparently—without revealing any underlying operational data.
           </p>
           <div className="flex justify-center">
             <RainbowKitCustomConnectButton />
