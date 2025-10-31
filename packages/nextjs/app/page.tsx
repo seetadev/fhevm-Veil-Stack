@@ -1,5 +1,4 @@
 import { CanteenDashboard } from "./_components/CanteenDashboard";
-import { FHECounterDemo } from "./_components/FHECounterDemo";
 
 export default function Home() {
   return (

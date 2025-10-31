@@ -49,7 +49,8 @@ export const useCanteenWagmi = (parameters: {
   // Encryption hook for memory values
   const encryptionContext = useFHEEncryption({
     instance,
-    chainId: allowedChainId,
+    ethersSigner,
+    contractAddress: canteenContract?.address,
   });
 
   // Write contract hook
