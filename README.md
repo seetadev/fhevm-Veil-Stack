@@ -1,4 +1,4 @@
-## ** FHEVM Veil Stack**
+## FHEVM Veil Stack
 
 **A Confidential, Decentralized Container Orchestration Layer Powered by FHE**
 
